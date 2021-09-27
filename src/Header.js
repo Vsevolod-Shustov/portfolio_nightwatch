@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar'
 
-import Logo from '../public/logo.svg'
+import Logo from '../public/images/logo.svg'
 
 function Header(){
   return (
