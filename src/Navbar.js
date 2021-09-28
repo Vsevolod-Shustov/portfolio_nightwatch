@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import NavItem from './NavItem';
 
 import './Navbar.scss';
 
@@ -7,19 +6,28 @@ import './Navbar.scss';
 
 function Navbar(){
   const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
+  const handleControllerClick = () => {
     setIsOpen(!isOpen);
+    console.log('handleParentClick');
+  }
+  const handleContentClick = (e) => {
+    e.stopPropagation();
+    console.log('handleChildClick');
   }
   return (
     <nav id="navbar">
-      <NavItem url="http://example.com" text="example" />
-      <div className="dropdown-controller" onClick={handleClick}>
-      Dropdown controller 1
+      <div className="dropdown-controller" onClick={handleControllerClick}>
+      Features <span className="dropdown-status">{isOpen ? "^" : "v"}</span>
 
-        {isOpen && <div className="dropdown-content">
-        Dropdown content 1
+        {isOpen && <div className="dropdown-content" onClick={handleContentClick}>
+        <a href="http://example.com">Rank Tracker</a>
+        <a href="http://example.com">Reporting</a>
+        <a href="http://example.com">Site Audit</a>
         </div>}
       </div>
+      <a href="http://example.com">Enterprise</a>
+      <a href="http://example.com">Pricing</a>
+      <a href="http://example.com">Blog</a>
     </nav>
   )
 }

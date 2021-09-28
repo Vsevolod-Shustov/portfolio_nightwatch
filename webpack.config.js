@@ -10,6 +10,9 @@ module.exports = {
   devServer: {
     static: path.join(__dirname, "dist"),
     port: PORT,
+    headers: {
+      'Cache-Control': 'no-store',
+    },
   },
   output: {
     publicPath: "auto",
