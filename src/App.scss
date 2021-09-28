@@ -1,7 +1,31 @@
-$body-color: green;
+$text-color: #bdbad1;
 $body-background-color: #1a1a1a;
+$header-height: 100px;
 
 body {
-  color: $body-color;
+  color: $text-color;
   background-color: $body-background-color;
+}
+
+#app {
+  width:100%;
+  max-width:1000px;
+  margin:0 auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header {
+  position:fixed;
+  height:$header-height;
+  width:100%;
+  max-width:1000px;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+#main {
+  margin-top:$header-height;
 }
