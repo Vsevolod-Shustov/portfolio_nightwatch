@@ -1,3 +1,7 @@
+@import 'variables';
+
+$button-padding:20px;
+
 #header {
   display:flex;
   align-items: center;
@@ -5,4 +9,35 @@
 
 .logo {
   width:220px;
+}
+
+.nav-item {
+  display:block;
+  padding:$button-padding 0;
+  margin: 0 $button-padding;
+  font-size: 11px;
+  line-height: 1.15em;
+  letter-spacing: .2em;
+  text-decoration:none;
+  color:$nav-item-color;
+  &:hover {
+    color:$nav-item-color-hover;
+  }
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.login-button {
+  border-bottom:2px solid white;
+}
+
+.signup-button {
+  background-color:$blue;
+  border-radius:5px;
+  padding:$button-padding;
+  margin:0;
+  font-weight:bold;
+  &:hover {
+    color:white;
+  }
 }
