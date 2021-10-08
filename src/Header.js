@@ -12,7 +12,6 @@ function Header(){
         <img src={Logo} className="logo" />
       </a>
       <Navbar />
-      <div className="navbar-mobile-toggle mobile">&equiv;</div>
     </header>
   )
 }

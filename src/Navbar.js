@@ -3,21 +3,29 @@ import React, {useState} from 'react';
 import './Navbar.scss';
 
 function Navbar(){
-  const [isOpen, setIsOpen] = useState(false);
-  const handleControllerClick = () => {
-    setIsOpen(!isOpen);
+  const [isDropdown1Open, setisDropdown1Open] = useState(false);
+  const handleDropdown1ControllerClick = () => {
+    setisDropdown1Open(!isDropdown1Open);
     console.log('handleParentClick');
   }
-  const handleContentClick = (e) => {
+  const handleDropdown1ContentClick = (e) => {
     e.stopPropagation();
-    console.log('handleChildClick');
+    console.log('handleChildDropdown1Click');
+  }
+
+  const [isMobileMenuOpen, setisMobileMenuOpen] = useState(false);
+  const handleMobileMenuControllerClick = () => {
+    setisMobileMenuOpen(!isMobileMenuOpen);
+    console.log('handleMobileMenuClick');
   }
   return (
+    <>
+    {isMobileMenuOpen &&
     <nav id="navbar">
-      <div className="dropdown-controller" onClick={handleControllerClick}>
-        <span className="nav-item">Features <span className="dropdown-status">{isOpen ? "^" : "v"}</span></span>
+      <div className="dropdown-controller" onClick={handleDropdown1ControllerClick}>
+        <span className="nav-item">Features <span className="dropdown-status">{isDropdown1Open ? "^" : "v"}</span></span>
 
-        {isOpen && <div className="dropdown-content" onClick={handleContentClick}>
+        {isDropdown1Open && <div className="dropdown-content" onClick={handleDropdown1ContentClick}>
         <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Rank Tracker</a>
         <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Reporting</a>
         <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Site Audit</a>
@@ -29,6 +37,9 @@ function Navbar(){
       <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item login-button">Login</a>
       <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item signup-button">Sign Up Free</a>
     </nav>
+    }
+    <div className="navbar-mobile-toggle mobile" onClick={handleMobileMenuControllerClick}>&equiv;</div>
+    </>
   )
 }
 

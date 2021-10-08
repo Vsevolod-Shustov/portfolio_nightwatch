@@ -9,16 +9,6 @@
   width:220px;
 }
 
-.navbar-mobile-toggle {
-  font-size:40px;
-  font-weight:bold;
-  height:100px;
-  width:100px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
 @media (max-width:1023px) {
   #header {
     padding: 0 30px;
