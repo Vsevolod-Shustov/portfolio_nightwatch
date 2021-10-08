@@ -14,8 +14,8 @@ function Navbar(){
   }
   return (
     <nav id="navbar">
-      <div className="dropdown-controller nav-item" onClick={handleControllerClick}>
-      Features <span className="dropdown-status">{isOpen ? "^" : "v"}</span>
+      <div className="dropdown-controller" onClick={handleControllerClick}>
+        <span className="nav-item">Features <span className="dropdown-status">{isOpen ? "^" : "v"}</span></span>
 
         {isOpen && <div className="dropdown-content" onClick={handleContentClick}>
         <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Rank Tracker</a>
@@ -26,6 +26,8 @@ function Navbar(){
       <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Enterprise</a>
       <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Pricing</a>
       <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Blog</a>
+      <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item login-button">Login</a>
+      <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item signup-button">Sign Up Free</a>
     </nav>
   )
 }

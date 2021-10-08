@@ -12,9 +12,7 @@ function Header(){
         <img src={Logo} className="logo" />
       </a>
       <Navbar />
-      <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item login-button">Login</a>
-      <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item signup-button">Sign Up Free</a>
-      <button className="navbar-mobile-toggle mobile">button</button>
+      <div className="navbar-mobile-toggle mobile">&equiv;</div>
     </header>
   )
 }

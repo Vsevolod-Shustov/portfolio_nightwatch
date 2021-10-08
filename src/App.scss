@@ -13,12 +13,12 @@ body {
 
 #header {
   position:fixed;
-  height:$header-height;
   width:100%;
   max-width:1000px;
   top:0;
   left:50%;
   transform: translateX(-50%);
+  height:$header-height;
 }
 
 #main {
@@ -31,6 +31,7 @@ body {
   .desktop {
     display:none;
   }
+
 }
 
 
@@ -38,5 +39,8 @@ body {
 @media (min-width:1024px) {
   .mobile {
     display:none;
+  }
+  #header {
+
   }
 }

@@ -1,3 +1,6 @@
+@import 'variables';
+$button-padding:20px;
+
 #navbar {
   flex: 1 1 auto;
   display:flex;
@@ -14,16 +17,46 @@
 
 .dropdown-content {
   background:#1a1a1a;
-  box-shadow:1px 1px 50px 0 #000;
-
   display:flex;
   flex-direction: column;
 }
 
+.nav-item {
+  display:block;
+  padding:$button-padding 0;
+  margin: 0 $button-padding;
+  font-size: 11px;
+  line-height: 1.15em;
+  letter-spacing: .2em;
+  text-decoration:none;
+  color:$nav-item-color;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.signup-button {
+  background-color:$blue;
+  border-radius:5px;
+  padding:$button-padding;
+  margin:0;
+  font-weight:bold;
+  &:hover {
+    color:white;
+  }
+}
 
 
 @media (max-width:1023px) {
-
+  #navbar {
+    position:absolute;
+    top:100px;
+    left:0;
+    width:100%;
+    flex-direction: column;
+  }
+  .dropdown-controller.nav-item {
+    padding:0!important;
+  }
 }
 
 
@@ -37,5 +70,16 @@
     position:absolute;
     left:0;
     top:100%;
+    box-shadow:1px 1px 50px 0 #000;
+  }
+
+  .nav-item {
+    &:hover {
+      color:$nav-item-color-hover;
+    }
+  }
+
+  .login-button {
+    border-bottom:2px solid white;
   }
 }
