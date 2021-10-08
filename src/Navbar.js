@@ -20,8 +20,7 @@ function Navbar(){
   }
   return (
     <>
-    {isMobileMenuOpen &&
-    <nav id="navbar">
+    <nav id="navbar" className={isMobileMenuOpen ? "open" : "closed"}>
       <div className="dropdown-controller" onClick={handleDropdown1ControllerClick}>
         <span className="nav-item">Features <span className="dropdown-status">{isDropdown1Open ? "^" : "v"}</span></span>
 
@@ -37,7 +36,6 @@ function Navbar(){
       <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item login-button">Login</a>
       <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item signup-button">Sign Up Free</a>
     </nav>
-    }
     <div className="navbar-mobile-toggle mobile" onClick={handleMobileMenuControllerClick}>&equiv;</div>
     </>
   )

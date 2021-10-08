@@ -4,7 +4,7 @@ $button-padding:20px;
 #navbar {
   flex: 1 1 auto;
   display:flex;
-  background:#1a1a1a;
+  background:$body-background-color;
 }
 
 .dropdown-status {
@@ -17,7 +17,7 @@ $button-padding:20px;
 }
 
 .dropdown-content {
-  background:#1a1a1a;
+  background:$body-background-color;
   display:flex;
   flex-direction: column;
 }
@@ -65,6 +65,9 @@ $button-padding:20px;
     left:0;
     width:100%;
     flex-direction: column;
+    &.closed {
+      display:none;
+    }
   }
   .dropdown-controller.nav-item {
     padding:0!important;

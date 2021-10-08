@@ -9,7 +9,7 @@ function Header(){
   return (
     <header id="header">
       <a href="#" className="home-link">
-        <img src={Logo} className="logo" />
+        <img src={Logo} className="logo" alt="logo" />
       </a>
       <Navbar />
     </header>

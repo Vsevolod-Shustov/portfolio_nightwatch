@@ -1,0 +1,41 @@
+@import 'variables';
+
+#footer {
+  margin-top:50px;
+}
+.footer-block {
+  margin-bottom:50px;
+}
+.small-header.footer {
+    margin-bottom: 20px;
+    background-color: transparent;
+    font-size: 12px;
+}
+.small-header {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color:white;
+}
+.footer__link {
+    display: block;
+    margin-bottom: 20px;
+    color: #bdbad1;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+
+@media (max-width:1023px) {
+
+}
+
+
+
+@media (min-width:1024px) {
+  #footer {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}

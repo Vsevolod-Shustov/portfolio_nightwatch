@@ -7,14 +7,16 @@ body {
 
 #app {
   width:100%;
-  max-width:1000px;
+  max-width:$max-width;
   margin:0 auto;
+  padding:0 20px;
 }
 
 #header {
   position:fixed;
   width:100%;
-  max-width:1000px;
+  padding:0 20px;
+  max-width:$max-width;
   top:0;
   left:50%;
   transform: translateX(-50%);
