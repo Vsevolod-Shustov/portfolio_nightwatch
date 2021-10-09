@@ -16,7 +16,7 @@ function Navbar(){
   const [isMobileMenuOpen, setisMobileMenuOpen] = useState(false);
   const handleMobileMenuControllerClick = () => {
     setisMobileMenuOpen(!isMobileMenuOpen);
-    console.log('handleMobileMenuClick');
+    console.log('handleMobileMenuControllerClick');
   }
   return (
     <>

@@ -65,10 +65,19 @@ $button-padding:20px;
     left:0;
     width:100%;
     flex-direction: column;
+    transition:transform 0.5s;
+    &.open {
+      transform: translateX(0%);
+    }
     &.closed {
-      display:none;
+      transform:translateX(100%);
     }
   }
+
+  .navbar-mobile-toggle {
+    padding-bottom:0.5rem;
+  }
+
   .dropdown-controller.nav-item {
     padding:0!important;
   }
