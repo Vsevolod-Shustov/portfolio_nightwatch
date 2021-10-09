@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import './Navbar.scss';
+import styles from './Navbar.scss';
 
 function Navbar(){
   const [isDropdown1Open, setisDropdown1Open] = useState(false);
@@ -20,23 +20,23 @@ function Navbar(){
   }
   return (
     <>
-    <nav id="navbar" className={isMobileMenuOpen ? "open" : "closed"}>
-      <div className="dropdown-controller" onClick={handleDropdown1ControllerClick}>
-        <span className="nav-item">Features <span className="dropdown-status">{isDropdown1Open ? "^" : "v"}</span></span>
+    <nav id={styles.navbar} className={isMobileMenuOpen ? styles.open : styles.closed}>
+      <div className={styles.dropdown_controller} onClick={handleDropdown1ControllerClick}>
+        <span className={styles.nav_item}>Features <span className={styles.dropdown_status}>{isDropdown1Open ? "^" : "v"}</span></span>
 
-        {isDropdown1Open && <div className="dropdown-content" onClick={handleDropdown1ContentClick}>
-        <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Rank Tracker</a>
-        <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Reporting</a>
-        <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Site Audit</a>
+        {isDropdown1Open && <div className={styles.dropdown_content} onClick={handleDropdown1ContentClick}>
+        <a href="http://example.com" target="_blank" rel="noreferrer" className={styles.nav_item}>Rank Tracker</a>
+        <a href="http://example.com" target="_blank" rel="noreferrer" className={styles.nav_item}>Reporting</a>
+        <a href="http://example.com" target="_blank" rel="noreferrer" className={styles.nav_item}>Site Audit</a>
         </div>}
       </div>
-      <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Enterprise</a>
-      <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Pricing</a>
-      <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item">Blog</a>
-      <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item login-button">Login</a>
-      <a href="http://example.com" target="_blank" rel="noreferrer" className="nav-item signup-button">Sign Up Free</a>
+      <a href="http://example.com" target="_blank" rel="noreferrer" className={styles.nav_item}>Enterprise</a>
+      <a href="http://example.com" target="_blank" rel="noreferrer" className={styles.nav_item}>Pricing</a>
+      <a href="http://example.com" target="_blank" rel="noreferrer" className={styles.nav_item}>Blog</a>
+      <a href="http://example.com" target="_blank" rel="noreferrer" className={`${styles.nav_item} ${styles.login_button}`}>Login</a>
+      <a href="http://example.com" target="_blank" rel="noreferrer" className={`${styles.nav_item} ${styles.signup_button}`}>Sign Up Free</a>
     </nav>
-    <div className="navbar-mobile-toggle mobile" onClick={handleMobileMenuControllerClick}>&equiv;</div>
+    <div className={`${styles.navbar_mobile_toggle} ${styles.mobile}`} onClick={handleMobileMenuControllerClick}>&equiv;</div>
     </>
   )
 }

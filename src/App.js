@@ -3,7 +3,7 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 
-import './App.scss';
+import styles from './App.scss';
 
 class App extends React.Component {
   constructor(props){
@@ -12,7 +12,7 @@ class App extends React.Component {
 
   render(){
     return (
-      <div id="app">
+      <div id={styles.app}>
         <Header />
         <Main />
         <Footer />

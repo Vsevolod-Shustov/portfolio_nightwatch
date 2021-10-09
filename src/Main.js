@@ -1,21 +1,21 @@
 import React from 'react';
 
-import './Main.scss';
+import styles from './Main.scss';
 import Badges from '../public/images/badges.png'
 
 function Main(){
   return (
-    <main id="main">
-      <section className="header-block">
-        <h1 className="main-heading">
+    <main id={styles.main}>
+      <section className={styles.header_block}>
+        <h1 className={styles.main_heading}>
           Discover your exact search engine rankings from 107,296 locations worldwide
         </h1>
-        <p className="p-large">
+        <p className={styles.p_large}>
           Nightwatch solves the location tracking issue that plagues nearly every popular rank tracking tool.
           <br/><br/>
           Finally you can track your search engine rankings on all leading searching engines down to ZIP code level.
         </p>
-        <div className="badges">
+        <div className={styles.badges}>
           <img src={Badges} alt="badges" />
         </div>
       </section>

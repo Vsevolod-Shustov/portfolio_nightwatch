@@ -5,3 +5,17 @@ $blue: #198cff;
 $body-background-color: #1a1a1a;
 $header-height: 100px;
 $max-width: 1280px;
+
+@media (max-width:1023px) {
+  .desktop {
+    display:none!important;
+  }
+}
+
+
+
+@media (min-width:1024px) {
+  .mobile {
+    display:none!important;
+  }
+}
