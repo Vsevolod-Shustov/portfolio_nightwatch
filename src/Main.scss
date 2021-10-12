@@ -3,6 +3,9 @@
 #main {
   padding:50px 20px 20px;
   margin-top:$header-height;
+  &>section {
+    margin-bottom:50px;
+  }
 }
 .header_block {
   max-width:800px;
@@ -25,6 +28,34 @@
     font-weight: 400;
 }
 
+.main_signup_button {
+  display: flex;
+  padding: 24px 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #198cff;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  width:400px;
+  max-width:100%;
+  margin:30px auto 60px;
+  font-weight:600;
+}
+
+.why h2 {
+  color:white;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 54px;
+  line-height: 64px;
+}
+
+.blue {
+  color:$blue;
+}
+
 @media (max-width:1023px) {
   .main_heading {
     font-size: 40px;
@@ -35,5 +66,10 @@
 
 
 @media (min-width:1024px) {
-
+  .why {
+    display:flex;
+  }
+  .why>div {
+    flex:1 1 100%;
+  }
 }
