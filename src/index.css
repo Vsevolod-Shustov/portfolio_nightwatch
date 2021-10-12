@@ -20,6 +20,10 @@ img {
   max-width:100%;
 }
 
+::placeholder {
+  color: gray;
+}
+
 @media (max-width:1023px) {
 
 }
