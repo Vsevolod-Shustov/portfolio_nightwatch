@@ -32,6 +32,16 @@
 
 
 
+@media (min-width:600px) {
+  #footer {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+
+
 @media (min-width:1024px) {
   #footer {
     display:grid;
